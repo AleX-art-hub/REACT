@@ -5,7 +5,7 @@ const Calendar = ({currentDate})=> {
     return (
         <article>
             <Day currentDate={currentDate}/>
-            <Month date={currentDate} currentDate={currentDate}/>
+            <Month date={currentDate} />
         </article>
     );
 };

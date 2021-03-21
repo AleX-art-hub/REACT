@@ -13,7 +13,7 @@ eachDayOfInterval({
     <CDate key={dayDate} dayDate={dayDate} date={date} currentDate={currentDate}/>
 ));
 
-const Week = (props) => <ul className={styles.row}>{getDaysWWeek(props)}</ul>
+const Week = (props) => <ul className={styles.row}>{getDaysWWeek(props)}</ul>;
 
 Week.propTypes = {
     weekDate: PropTypes.instanceOf(Date).isRequired,
