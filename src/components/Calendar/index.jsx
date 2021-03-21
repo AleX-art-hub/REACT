@@ -1,7 +1,16 @@
 import React, {Component} from 'react';
 import {format, add, getWeeksInMonth, getDaysWeeksInMonth} from 'date-fns';
 
-class Calendar extends Component{
+const Calendar = ({currentDate})=> {
+    return (
+        <article>
+            <Day currentDate={currentDate}/>
+            <Month date={currentDate} currentDate={currentDate}/>
+        </article>
+    );
+};
+
+/*class Calendar extends Component{
     constructor(props){
         super(props);
         this.state = {
@@ -27,5 +36,5 @@ class Calendar extends Component{
             </div>
         );
     }
-}
+}*/
 export default Calendar;
