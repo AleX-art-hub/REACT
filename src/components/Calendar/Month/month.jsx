@@ -6,7 +6,7 @@ import PropTypes from 'prop-types';
 import {format, add, getWeeksInMonth, getDaysWeeksInMonth} from 'date-fns';
 
 
-const getWeek = ({date, currentDate}) =>{
+const getWeeks = ({date, currentDate}) =>{
     return eachDayOfInterval({
         start: startOfMonth(date),
         end: endOfMonth(date),
@@ -14,6 +14,7 @@ const getWeek = ({date, currentDate}) =>{
     <Week key={weekDate} weekDate={weekDate} date={date} currentDate={currentDate} />
     ));
 };
+
 const Month = (props) => {
     const{date} = props;
     const className = classNames(styles.cell, styles.dayName);
@@ -34,4 +35,12 @@ const Month = (props) => {
     )
 };
 
-export default Week;
+Month.propTypes = {
+    date: PropTypes.instanceOf(Date).isRequired,
+    currentDate: PropTypes.instanceOf(Date),
+};
+Month.defaultProps = {
+    currentDate: new Date(),
+};
+
+export default Month;

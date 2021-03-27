@@ -9,17 +9,18 @@ import { Component } from 'react';
 //import Clock from '../src/components/Clock';
 //import UserList from './components/UserList';
 //import SelectedUsers from './components/SelectedUSers';
-import LoginForm from './components/LoginForm';
+//import LoginForm from './components/LoginForm';
 //import Calendar from './components/Calendar';
+import Chat from './components/Chat';
 
 const App= () => {
   return (
   <>
-    <LoginForm />
+    <Chat />
   </>
   );
 };
-
+export default App;
 
 /*const dbUsers = [
                 {
@@ -115,4 +116,4 @@ function App(){
     )
   }
 }*/
-export default App;
+

@@ -1,4 +1,10 @@
+@import "../setting/color_theme.scss";
+@import "../setting/contants.scss;";
+@import "../setting/base_styles.scss";
+
 .wrapper {
+  @extend %wrapper;
+  background-color: $primary-color;
 }
 .name {
 }
