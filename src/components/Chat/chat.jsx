@@ -2,14 +2,14 @@ import React, {useState, useReducer, useEffect} from 'react';
 import PropTypes from 'prop-types';
 import chatReducer from './chatReducer';
 
-const data={
+const data = {
     users: [
         {
             id: 1,
-            name: 'Jonh Smith',    
+            name: 'John Smith',
         },
         {
-            id:2,
+            id: 2,
             name: 'Tom Fox',
         }
     ],
@@ -34,23 +34,28 @@ const data={
             userId: 1,
             body: 'some message',
         },
+        {
+            userId: null,
+            body: 'some message',
+        }
     ]
-    
-}
+};
+
 const getData = () => data;
 
-const initialState ={users: new Map(), message: []}
+const initialState = {users: new Map(), messages: []};
 
 const Chat = (props) => {
     const [state, dispatch] = useReducer(chatReducer, initialState);
 
-    useEffect(()=>{
+    useEffect(() => {
         const data = getData();
         dispatch({
             type: 'GET_MESSAGE_SUCCESS',
             data,
         });
-    },[]);
+    }, []);
+
     const {messages} = state;
     return(
         <ul>

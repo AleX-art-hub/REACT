@@ -13,11 +13,11 @@ import { Component } from 'react';
 //import Calendar from './components/Calendar';
 import Chat from './components/Chat';
 
-const App= () => {
+const App = () => {
   return (
-  <>
-    <Chat />
-  </>
+    <>
+      <Chat />
+    </>
   );
 };
 export default App;
