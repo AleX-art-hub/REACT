@@ -48,7 +48,7 @@ class Slider extends Component {
         return(
             <div>
                 <Slide currentSlide={slides[currentIndex]}/>
-                <ControlSlider next={this.nextIndex} prev={this.prevIndex} fullscreen={this.fullscreenMode}/>
+                <ControlSlider next={this.nextIndex} prev={this.prevIndex} fullscreenMode={this.fullscreenMode}/>
             </div>
         );
     }
