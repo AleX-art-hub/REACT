@@ -64,4 +64,4 @@ class ControlSlider extends Component {
         )
     }
 }
- export default ControlSlider;
+export default ControlSlider;

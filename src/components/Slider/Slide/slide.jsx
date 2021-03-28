@@ -1,18 +1,5 @@
 import React, {Component} from 'react';
 
-/*const Slide = (props) => {
-    const [img, setImg] = useState(new Image());
-    const [isLoad, setIsLoad] = useState(false);
-
-    const load = () => {
-        const {currentSlide: {src},} = props;
-        //img.src = src;
-        setImg(src)
-
-    }
-    useEffect
-}*/
-
 class Slide extends Component{
     constructor(props){
         super(props);
